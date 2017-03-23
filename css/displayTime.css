@@ -1,0 +1,8 @@
+#clock {
+	padding: 10px;
+	border: 1px solid #000000;
+}
+
+.clock1, .clock2, .clock3 {
+	display: inline-block;
+}

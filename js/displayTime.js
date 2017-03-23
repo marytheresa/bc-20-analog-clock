@@ -5,7 +5,6 @@ var Clock = function(timezone, canvas) {
 
 Clock.prototype.startTimer = function() {
 	setInterval(this.checkTimezone(this.timezone), 1000);
-	return this.checkTimezone(this.timezone);
 }
 
 Clock.prototype.checkTimezone = function() {
@@ -39,7 +38,7 @@ Clock.prototype.checkTimezone = function() {
       }
 	    return value;
 	};
-	displayTime(2);
+	this.displayTime();
 };
 
 Clock.prototype.displayTime = function(val) {
@@ -77,3 +76,6 @@ Clock.prototype.displayTime = function(val) {
 var clock1 = new Clock("(UTC-07)", document.getElementById("clock1"));
 var clock2 = new Clock("(UTC-01)", document.getElementById("clock2"));
 var clock3 = new Clock("(UTC-02)", document.getElementById("clock3"));
+clock1.startTimer();
+clock2.startTimer();
+clock3.startTimer();
