@@ -12,17 +12,17 @@
  - None
 
 ### Installation and setup
-1. Go to `` or clone the git repo into a folder in your local system using "git clone ``".
+1. Go to `https://github.com/marytheresa/bc-20-analog-clock` or clone the git repo into a folder in your local system using `git clone https://github.com/marytheresa/bc-20-analog-clock`
 2. Open the Index.html file in your browser.
 3. Click the drop-down to select any other time-zones to view and click `Get Time`.
 
 That's it, Enjoy!
 
 ### Authors 
-	NWANKWO MARY_THERESA
+NWANKWO MARY-THERESA
 
 ### Git Repository
-``
+`https://github.com/marytheresa/bc-20-analog-clock`
 
 
 
