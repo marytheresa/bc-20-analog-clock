@@ -51,11 +51,10 @@ Clock.prototype.displayTime = function(val) {
 	console.log(typeof date.getHours());*/
 	var m = date.getMinutes();
 	var s = date.getSeconds();
-  var canvas = document.getElementById("clock1");
-  var ctx = canvas.getContext("2d");
+  var ctx = this.canvas.getContext("2d");
   var radius = 100;
-  var x = canvas.width / 2;
-  var y = canvas.height / 2;
+  var x = this.canvas.width / 2;
+  var y = this.canvas.height / 2;
   
   function drawHand(shift, armLength, armColor) {
     angle = (2 * Math.PI * shift) - (Math.PI / 2);
@@ -69,12 +68,12 @@ Clock.prototype.displayTime = function(val) {
     ctx.stroke();
     
   };
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 	drawHand(h / 12, 0.50, '#000000'); // Hour
 	drawHand(m / 60, 0.75, '#000000'); // Minute
 	drawHand(s / 60, 1.00, 'blue'); // Second*/
 }
 
-var clock1 = new Clock("UTC-07", canvas1);
-var clock2 = new Clock(timezone, canvas2);
-var clock3 = new Clock(timezone, canvas3);
+var clock1 = new Clock("(UTC-07)", document.getElementById("clock1"));
+var clock2 = new Clock("(UTC-01)", document.getElementById("clock2"));
+var clock3 = new Clock("(UTC-02)", document.getElementById("clock3"));
