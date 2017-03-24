@@ -42,14 +42,15 @@ Clock.prototype.displayTime = function(val) {
 
     function hourMarkings(armLength) {
         for (var i = 0; i < 12; i++) {
-            angleInRadians = ((i / 12) * 2 * Math.PI * radius)-(Math.PI / 2);
-            ctx.lineWidth = 15;
+            angleInRadians = (2 * Math.PI * i / 12) - (Math.PI / 2);
+            //angleInRadians = ((i / 12) * 2 * Math.PI * radius)-(Math.PI / 2);
+            ctx.lineWidth = 10;
             ctx.beginPath();
 
-            var x1 = (x) + (Math.cos(angleInRadians) * armLength);
-            var y1 = (y) + (Math.sin(angleInRadians) * armLength);
-            var x2 = (x) + (Math.cos(angleInRadians) * (armLength - (armLength / 7)));
-            var y2 = (y) + (Math.sin(angleInRadians) * (armLength - (armLength / 7)));
+            var x1 = x + (Math.cos(angleInRadians) * (radius));
+            var y1 = y + (Math.sin(angleInRadians) * (radius));
+            var x2 = x + (Math.cos(angleInRadians) * ((armLength + armLength/3) * radius));
+            var y2 = y + (Math.sin(angleInRadians) * ((armLength + armLength/3) * radius));
 
             ctx.moveTo(x1, y1);
             ctx.lineTo(x2, y2);
